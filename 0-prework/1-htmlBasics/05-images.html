@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Images!</title>
+    </head>
+<!-- Had to some slight modifications as my file name wasn't exactly as the example provided.  Also, it seems the that URL link to the image was slightly different as well, but should be correct now.-->
+    <body>
+        <h3>Image reference from inside the project</h3>
+        <img src="../4-assets/TurnForTheWorse-930x932.jpg" width="300" height="300">
+
+        <hr>
+        <h3>Reference an outside URL</h3>
+        <img src="https://ericjoyner.com/wp-content/uploads/2015/06/TurnForTheWorse-930x932.jpg">
+
+        <hr>
+
+        <h3>Image referencing another page from an image</h3>
+        <a href="https://ericjoyner.com/wp-content/uploads/2015/06/TurnForTheWorse-930x932.jpg"><img src="../4-assets/TurnForTheWorse-930x932.jpg" width="300" height="300"></a>
+
+        <hr>
+
+        <h3> Adding a little style to the image</h3>
+        <a href="https://ericjoyner.com/wp-content/uploads/2015/06/TurnForTheWorse-930x932.jpg"><img src="../4-assets/TurnForTheWorse-930x932.jpg" class="circle" width="300" height="300"></a>
+            <!-- Did this artist do work for Sunshine Bakery here in Fortville? -->
+        <style>
+        .circle {
+            border-radius: 250px;
+        }
+            </style>
+         
+        <h3> Local</h3> 
+        <a href="../4-assets/c-h-wagon.jpg"><img src="../4-assets/c-h-wagon.jpg" width="300" height="200"></a>
+        <hr>
+        
+        <h3>URL</h3>
+        <a href="https://i.kym-cdn.com/photos/images/newsfeed/001/019/044/ea0.jpg" target="_blank" class="circle"><img src="../4-assets/c-h-wagon.jpg" width="500" height="400"></a>
+
+    </body>
+</html>

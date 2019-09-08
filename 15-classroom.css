@@ -1,0 +1,50 @@
+/* 
+Challenge 1:
+
+#all {
+    border: thick solid black;
+    border-radius: 10px;
+    background-color: grey;
+}    
+
+.two-true {
+    background-color: lightgrey;
+    text-align: center;
+    border: thin solid black;
+    border-radius: 10pt;
+    width: 30%;
+    height: 200px;
+    display: inline-block;
+    
+}
+
+h1 {
+    color: lightgreen;
+    text-align: center;
+}
+
+h3 {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+*/
+
+/*Challenge 2:*/
+#all-table {
+    width: 700px;
+    text-align: center; 
+    margin: auto;
+}
+
+#movie-table {
+    background-color: lightskyblue;
+    border: .5em solid black;
+    margin: auto;
+}
+
+#titles {
+    font-style: italic;
+}

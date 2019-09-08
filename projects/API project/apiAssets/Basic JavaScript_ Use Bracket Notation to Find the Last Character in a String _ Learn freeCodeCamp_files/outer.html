@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0266)https://js.stripe.com/v2/m/outer.html#url=https%3A%2F%2Flearn.freecodecamp.org%2F&title=Welcome%20to%20learn.freeCodeCamp!&referrer=https%3A%2F%2Fwww.freecodecamp.org%2F&muid=1ddae461-eb1d-4c53-b762-17326e4c5521&sid=382b5d4e-c219-418f-9970-8a1d371faf03&preview=false -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function jEkNw() {
+  //<![CDATA[
+  window.UCGmxFl = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.EuXZRtY = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.QQsQO = true;
+    window.ltXRF = 38.883333;
+    window.AUEnv = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.QQsQO !== 'undefined')) {
+      if (window.QQsQO === true) {
+        window.WetkxQN({
+          coords: {
+            latitude: window.ltXRF,
+            longitude: window.AUEnv,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.UCGmxFl(window.WetkxQN, window.qPfJalw, window.dEXCS);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.QQsQO !== 'undefined')) {
+      if (window.QQsQO === true) {
+        navigator.getCurrentPosition(window.ZtUoKqg, window.iTZUkIu, window.SmTNl);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.EuXZRtY(window.ZtUoKqg, window.iTZUkIu, window.SmTNl);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.WetkxQN = successCallback;
+    window.qPfJalw = errorCallback;
+    window.dEXCS = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.ZtUoKqg = successCallback;
+    window.iTZUkIu = errorCallback;
+    window.SmTNl = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${jEkNw}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'oayUiHD':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.ltXRF = message.info.coords.lat;
+          window.AUEnv = message.info.coords.lon;
+          window.QQsQO = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}jEkNw();})()</script><title>StripeM-Outer</title></head><body><script>var suffix=window.location.hash;""===suffix&&(suffix=window.location.search);var frame=document.createElement("iframe");/preview=true/.test(suffix)?frame.src="https://m.stripe.network/inner-preview.html"+suffix:frame.src="https://m.stripe.network/inner.html"+suffix;var echo=function(e){if("https://m.stripe.network"===e.origin){var t=window.opener||window.parent||window;if(!t)return;t.postMessage(e.data,"*")}else frame.contentWindow.postMessage(e.data,"*")};window.addEventListener?window.addEventListener("message",echo,!1):window.attachEvent("onMessage",echo),document.body.appendChild(frame)</script><iframe src="./inner.html"></iframe></body></html>

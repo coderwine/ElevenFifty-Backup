@@ -1,0 +1,65 @@
+/* 1 */
+h1 {
+    text-align: center;
+}
+
+/* 4 */
+.margins-padding {
+    border: 2px solid blue;
+    margin: 50px 250px 200px 200px;
+    padding: 20px 20px 20px 40px;
+}
+
+#margin-demo {
+    width: 400px;
+}
+
+#margin-experiment1 {
+    height: 40px;
+    background: blue;
+    border: 5px solid pink;
+    margin: 0;
+}
+
+#margin-experiment2 {
+    height: 40px;
+    background: blue;
+    border: 5px solid pink;
+    margin: 0;
+}
+
+/* 6 */
+#margin-experiment3 {
+    height: 40px;
+    background: blue;
+    border: 5px solid pink;
+    margin: 5px 10px 20px 0px;
+    padding: 10px;
+}
+
+#margin-experiment4 {
+    height: 40px;
+    background: blue;
+    border: 5px solid pink;
+    margin: 5px 10px 20px 0px;
+    padding: 20px;
+}
+
+/* 8 */
+.padding-class {
+    border: 2px solid red;
+    margin: 50px;
+    padding: 20px 20px 20px 40px;
+}
+
+#padding-experiment {
+    border: 2px solid yellow;
+    margin: 50px;
+    padding: 20px 40px;
+}
+
+img {
+    border: 3px solid black;
+    padding: 25px;
+    margin: 10px 400px;
+}

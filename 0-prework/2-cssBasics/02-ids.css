@@ -1,0 +1,27 @@
+/* For testing */
+/*
+body {
+    background-color: blue;
+}
+*/
+
+#number-one {
+    color: red;
+}
+
+#number-two {
+    font-size: 16px;
+}
+
+.first-class {
+    color: green;
+}
+
+.second-class {
+    font-size: 24px;
+}
+
+#id-test {
+    color: blue;
+    border: 2px solid green;
+}
